@@ -4,7 +4,7 @@ const ensureAuthenticated = require("./auth.model")
 const router = require("express").Router()
 
 
-router.get("/post",ensureAuthenticated,async (req,res)=>{
+router.get("/post",async (req,res)=>{
     const userPost = await postModel.find()
 
     // console.log("user data",req.user)
