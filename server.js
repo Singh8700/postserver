@@ -39,6 +39,12 @@ app.use("/api",AuthRouter)
 // send data 
 const PostData = require("./Post/sendpost")
 app.use("/auth",PostData)
+
+
+
+// user account 
+const UserAccount = require("./UserAccount/UserAccount")
+app.use("/user",UserAccount)
 app.listen(process.env.PORT,()=>{
     console.log("server is running")
 })
